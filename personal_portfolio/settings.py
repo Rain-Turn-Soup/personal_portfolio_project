@@ -25,7 +25,7 @@ SECRET_KEY = "django-insecure-rvlu8+m56==*w+yju07)i9+bh&6f-kh663a79^g0n7+5m(mbxb
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['rainturnsoup.pythonanywhere.com']
 
 
 # Application definition
