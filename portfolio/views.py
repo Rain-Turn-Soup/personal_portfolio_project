@@ -5,3 +5,6 @@ from .models import Project  # 導入Project 模組
 def home(request):
     projects = Project.objects.all() # 從資料庫取得所有資料
     return render(request, 'portfolio/home.html', {"projects":projects})
+
+def about(request):
+    return render(request, 'portfolio/about.html')
