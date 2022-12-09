@@ -16,23 +16,30 @@
     </div>
     <h2 class="mt-5">Portfolio</h2>
     <hr>
-    <div class="row">
+    <div class="row row-cols-1 row-cols-md-3 g-4">
         {% for project in projects %}
-            <div class="col-lg-4 col-md-6">
+
+            <div class="col">
+                <div class="card h-100 ">
                 {% if project.url %}
                     <a href="{{ project.url }}">
-                        <img src="{{ project.image.url }}" class="img-fluid mb-2">
+                        <img src="{{ project.image.url }}" class="card-img-top" alt="Card image cap" width="100%" height="150px">
                     </a>
                 {% else %}
-                    <img src="{{ project.image.url }}" class="img-fluid mb-2">
+                    <img src="{{ project.image.url }}" class="card-img-top" alt="Card image cap" width="100%" height="150px">
                 {% endif %}
-                <h2>{{project.title}}</h2>
-                <p>{{project.description}}</p>
+                <h5 class="card-header ">{{project.title}}</h5>
+                <div class="card-body height="100px">
+                    <p class="card-text ">{{project.description}}</p>
+                </div>
             </div>
+            </div>
+
         {% endfor %}
-        
-        
-        
+    </div>
+
+
+
 {% endblock %}
 
 <!--
@@ -41,5 +48,5 @@
     <br>
     <a href="{%  static 'portfolio/F9749.pdf' %}">Resume</a>     <!-- 載入靜態pdf檔案-->
     <br>
-    
+
 -->

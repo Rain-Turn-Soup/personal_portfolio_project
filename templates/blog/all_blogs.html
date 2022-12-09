@@ -15,12 +15,12 @@
     <div class="col">
       <div class="card border-secondary mb-4 h-100 ">
         <div class="card-header">{{ blog.date|date:"M d Y"|upper}}</div>
-      
+
         <div class="card-body">
           <h5 class="card-title">{{ blog.title }}</h5>
           <p class="card-text">{{blog.description|striptags|truncatechars:100}}</p>
         </div>
-        
+
         <div class="card-footer text-end">
           <a href="{% url 'blog:detail' blog.id %}" class="btn btn-primary">Button</a>
         </div>
